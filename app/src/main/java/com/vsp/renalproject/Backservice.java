@@ -1,5 +1,7 @@
 package com.vsp.renalproject;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 public class Backservice extends Service {
     private SharedPreferences sharedPreferences;
@@ -45,8 +49,14 @@ public class Backservice extends Service {
         databaseReference.child("requests").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                toast(snapshot.getKey());
-                toast("New Child added");
+//                toast(snapshot.getKey());
+//                toast("New Child added");
+                /*toast("New request added");
+                toast("Please request again to check amount and name toast");*/
+
+                if (snapshot.getChildrenCount() == 1) {
+                    toast("Please request again something went wrong ");
+                }
             }
 
             @Override
@@ -64,6 +74,12 @@ public class Backservice extends Service {
                             if (snapshot.child("amount").exists() && snapshot.child("description").exists()) {
                                 amount = snapshot.child("amount").getValue().toString();
                                 descrip = snapshot.child("description").getValue().toString();
+                                toast("NEW request detected with amount "+amount+" & description with "+descrip);
+                               /* Intent intent = new Intent(getApplicationContext(), sendnotification.class);
+                                intent.putExtra("nametonoti", repeatname);
+                                startActivity(intent);*/
+//                                sendnoti(repeatname);
+//                                toast(descrip);
                             } else
                                 repeatname = "";
                             Log.e("detailss", amount);
@@ -117,15 +133,18 @@ public class Backservice extends Service {
         return START_STICKY;
     }
 
+
+
+
     @Override
     public void onDestroy() {
         super.onDestroy();
         serviceRunning = false;
-        Toast.makeText(this, "Service Destroyed", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Service Destroyed", Toast.LENGTH_LONG).show();
 
     }
 
     private void toast(String x) {
-        Toast.makeText(getApplicationContext(), x, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), x, Toast.LENGTH_LONG).show();
     }
 }

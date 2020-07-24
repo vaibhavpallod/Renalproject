@@ -35,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
                     if (case11) {
                         if(Backservice.serviceRunning==false){
                             startService(new Intent(SplashScreen.this,Backservice.class));
-                            toast("Started");
+//                            toast("Started");
                         }
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);

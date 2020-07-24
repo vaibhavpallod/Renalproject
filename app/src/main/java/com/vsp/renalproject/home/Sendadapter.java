@@ -77,11 +77,11 @@ public class Sendadapter extends RecyclerView.Adapter<Sendadapter.MyviewHolder> 
                         if (!(amount.getText().toString().equals("") || description.getText().toString().equals(""))) {
                             sharedPreferences = context.getSharedPreferences("SaveData", MODE_PRIVATE);
                             String name = sharedPreferences.getString("name","");
-                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("clientdata").child(name).child("requests").child(sendreturn.getName()).child(String.valueOf(System.currentTimeMillis()));
+                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("clientdata").child(sendreturn.getName()).child("requests").child(name).child(String.valueOf(System.currentTimeMillis()));
                             databaseReference.child("amount").setValue(amount.getText().toString());
                             databaseReference.child("description").setValue(description.getText().toString());
                             dialog.dismiss();
-
+                            toast("Request sent");
                             context.startActivity(new Intent(context,MainActivity.class));
                         } else {
                             toast("Fields are empty");

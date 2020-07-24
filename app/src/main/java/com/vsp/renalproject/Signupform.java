@@ -46,7 +46,7 @@ public class Signupform extends AppCompatActivity {
         getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent));
         getWindow().setBackgroundDrawable(background);
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient_actionbar));
-        getSupportActionBar().setTitle("Signup Form");
+        getSupportActionBar().setTitle("Send request");
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
         databaseReference.addChildEventListener(new ChildEventListener() {
