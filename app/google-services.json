@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "698707595066",
+    "firebase_url": "https://renalprojectinternshala.firebaseio.com",
+    "project_id": "renalprojectinternshala",
+    "storage_bucket": "renalprojectinternshala.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698707595066:android:fcccc7ba87491ff28d0a03",
+        "android_client_info": {
+          "package_name": "com.vsp.renalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698707595066-ajqj0ni6ou4k7ubcdiru72efufffi55m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vsp.renalproject",
+            "certificate_hash": "3b5cf91f710943ad48179e1ae67bf84ce455d672"
+          }
+        },
+        {
+          "client_id": "698707595066-s7p0s6ghf5ahl0j7aabba0fut48mfedt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFOyzUz8K9aOOpqqtq08-wwwFxExTwcx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698707595066-s7p0s6ghf5ahl0j7aabba0fut48mfedt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

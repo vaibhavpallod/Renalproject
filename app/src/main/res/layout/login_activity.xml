@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logingradient"
+    android:orientation="vertical"
+
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="30dp"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="LOGIN TO YOUR ACCOUNT"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <!--<ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/calogo1"
+
+                    />-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="70dp"
+                    app:boxBackgroundColor="@color/Orange"
+                    app:hintTextColor="@color/Orange"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailField"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/edittext_style"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="10dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="8dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:boxStrokeColor="@color/Orange"
+                    app:hintTextColor="@color/Orange"
+
+                    app:passwordToggleEnabled="true">
+
+
+                    <EditText
+                        android:id="@+id/passwordField"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_style"
+                        android:drawableStart="@drawable/ic_baseline_vpn_key_password_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:padding="8dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/otptextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="OTP send to registered mobile number please enter it to verify"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:boxStrokeColor="@color/Orange"
+                    app:hintTextColor="@color/Orange">
+
+
+                    <EditText
+                        android:id="@+id/otpField"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_style"
+                        android:drawableLeft="@drawable/ic_outline_otp_pin_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Enter OTP"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/timerid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textColor="#D7EF0A0A"
+                    android:textSize="17dp" />
+
+                <Button
+                    android:id="@+id/resendotpbtn"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="-20dp"
+                    android:text="resend otp"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+
+                    />
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="SEND OTP" />
+
+                <Button
+                    android:id="@+id/otpverifybtn"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="LOGIN"
+                    android:visibility="gone" />
+
+                <!--
+                    <Spinner
+                        android:id="@+id/loginBtn"
+                        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+                        android:layout_gravity="center"
+                        android:layout_width="170dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="50dp"
+                        android:text="LOGIN"
+                        />
+
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:solidColor="@color/colorPrimary"
+                    />-->
+
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:elevation="30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="70dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Don't have account? "
+                    android:textColor="#EF1212"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:onClick="signup_click"
+                    android:text="Create new Account"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

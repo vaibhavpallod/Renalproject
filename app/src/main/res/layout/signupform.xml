@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signupform"
+    android:background="@drawable/signupback"
+
+    android:orientation="vertical"
+
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+
+        >
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:src="@drawable/signupimg"
+            />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/Orange"
+        android:layout_marginTop="60dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Full Name"
+            android:background="@drawable/edittext_stylewithboeder"
+            android:id="@+id/nameinsignupform"
+            android:paddingLeft="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:hintTextColor="@color/Orange"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_stylewithboeder"
+
+            android:hint="Email"
+
+            android:id="@+id/emailinsignupform"
+            android:paddingLeft="20dp"
+
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            app:hintTextColor="@color/Orange"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_stylewithboeder"
+
+                android:hint="Mobile No"
+                android:id="@+id/mobnoinsignupform"
+                android:paddingLeft="20dp"
+
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="20sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:helperTextTextColor="@color/Orange"
+        android:focusableInTouchMode="true"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_stylewithboeder"
+
+            android:hint="Password"
+            android:paddingLeft="20dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordinsignupform"
+            android:textSize="20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true"
+        app:helperTextTextColor="@color/Orange"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_stylewithboeder"
+
+            android:hint="Confirm Password"
+            android:paddingLeft="20dp"
+
+            android:ems="10"
+            android:id="@+id/confirmpasswordinsignupform"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="22sp"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        android:backgroundTint="#078ADD"
+        android:background="@drawable/rounded_button"
+
+        />
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>
